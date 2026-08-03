@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Text Formatting Examples</title>
+    <style>
+        body {
+            background-color: #f7ecd6;
+            color: #333;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 24px;
+            line-height: 1.6;
+        }
+
+        header,
+        footer {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+        }
+
+        section {
+            background: #fffaf0;
+            border-radius: 12px;
+            border: 1px solid #d8b48f;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #8b5e34;
+            margin-bottom: 12px;
+        }
+
+        p,
+        pre {
+            margin: 12px 0;
+        }
+
+        pre {
+            background: #f0e6d2;
+            border: 1px solid #e1d3b3;
+            border-radius: 8px;
+            padding: 14px;
+            overflow-x: auto;
+        }
+
+        .example {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #d8b48f;
+            margin: 6px 0;
+        }
+
+        .small-text {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .separator {
+            border: 1px solid #d8b48f;
+            margin: 24px 0;
+        }
+
+        .note {
+            color: #75543f;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Text Formatting Examples</h1>
+        <p class="small-text">A simple demonstration of basic HTML tags and how they change the appearance of text.</p>
+    </header>
+
+    <section>
+        <h2>Headings</h2>
+        <p>HTML headings organize content from the most important to the least important.</p>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    </section>
+
+    <section>
+        <h2>What is HTML?</h2>
+        <p>
+            HTML stands for <strong>HyperText Markup Language</strong>.<br>
+            It is used to build <em>web pages</em> by marking up text, links, images, and other page elements.
+        </p>
+        <p class="note">HTML formatting tags help browsers display text in a readable and attractive way.</p>
+    </section>
+
+    <section>
+        <h2>Text Styling with Tags</h2>
+        <p class="example" style="font-family: Arial, sans-serif; font-size: 1.25rem; color: #1f4e79;">This is
+            Arial-style text.</p>
+        <p class="example" style="font-family: 'Courier New', monospace; font-size: 1.4rem; color: #b02a2a;">This is
+            Courier New-style text.</p>
+        <p class="example" style="font-family: Verdana, sans-serif; font-size: 1rem; color: #2f7d32;">This is
+            Verdana-style text.</p>
+    </section>
+
+    <section>
+        <h2>Bold, Italic, and Underline</h2>
+        <p><strong>Bold text</strong> makes important words stand out.</p>
+        <p><em>Italic text</em> is often used for emphasis or titles.</p>
+        <p><u>Underlined text</u> adds a visible line beneath the words.</p>
+        <p>This text is <strong><em><u>bold, italic, and underlined</u></em></strong>.</p>
+    </section>
+
+    <section>
+        <h2>Big and Small Text</h2>
+        <p><big>This text appears larger.</big></p>
+        <p><small>This text appears smaller.</small></p>
+        <p>Normal text<br><big>Big text</big><br><small>Small text</small></p>
+    </section>
+
+    <section>
+        <h2>Superscript and Subscript</h2>
+        <p>Superscript text appears above the line.</p>
+        <p><sup>Example superscript</sup></p>
+        <p>Subscript text appears below the line.</p>
+        <p><sub>Example subscript</sub></p>
+        <p>Water formula: H<sub>2</sub>O</p>
+        <p>Einstein's equation: E = mc<sup>2</sup></p>
+        <p>Mathematical expression: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+    </section>
+
+    <section>
+        <h2>Line Breaks</h2>
+        <p>
+            The <code>&lt;br&gt;</code> tag forces a line break inside a paragraph.<br>
+            This text appears on the next line.
+        </p>
+    </section>
+
+    <section>
+        <h2>Preformatted Text</h2>
+        <p>The <code>&lt;pre&gt;</code> tag preserves spaces and line breaks exactly as they appear.</p>
+        <pre>
+Name   : Gautam Kumar
+Course : Computer Science
+College: United Institute of Technology
+City   : Allahabad
+        </pre>
+    </section>
+
+    <section>
+        <h2>Mixed Examples</h2>
+        <p class="example" style="font-family: Arial, sans-serif; font-size: 1.1rem; color: #2a5d9f;">
+            This text uses a modern inline style for color and font.
+        </p>
+        <p><strong>HTML</strong> stands for <em>HyperText Markup Language</em>.</p>
+        <p>Chemical formula: CO<sub>2</sub></p>
+    </section>
+
+    <section>
+        <h2>Explanation</h2>
+        <p>
+            This page shows common HTML text formatting tags and how they affect content.
+            Headings organize information, while tags such as <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, and
+            <code>&lt;u&gt;</code>
+            change the appearance of text.
+        </p>
+        <p>
+            Example tags like <code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> are useful for scientific notation
+            and math,
+            and the <code>&lt;pre&gt;</code> tag keeps spacing exactly as typed.
+        </p>
+        <p class="note">
+            Use these formatting tags to make HTML content clearer and easier to read. For richer design,
+            combine HTML structure with CSS styling.
+        </p>
+    </section>
+
+    <footer>
+        <hr class="separator">
+        <h3>Thank You!</h3>
+        <p class="small-text">Keep exploring HTML to build beautiful and well-structured web pages.</p>
+    </footer>
+</body>
+
+</html>
