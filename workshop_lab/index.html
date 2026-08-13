@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An index page linking every file in the workshop lab — HTML demos, tables, images, code, and README.">
+    <meta name="author" content="Gautam">
+    <title>Workshop Lab — Complete File Index</title>
+    <style>
+        /* ---------- Reset & Base ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+            background-size: 200% 200%;
+            animation: gradientFlow 14s ease infinite;
+            min-height: 100vh;
+            color: #f5f5f7;
+            padding: 30px 20px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Floating background orbs */
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::before {
+            width: 450px;
+            height: 450px;
+            background: #ec4899;
+            top: -150px;
+            left: -150px;
+            animation: floatBlob 18s ease-in-out infinite;
+        }
+
+        body::after {
+            width: 550px;
+            height: 550px;
+            background: #06b6d4;
+            bottom: -200px;
+            right: -200px;
+            animation: floatBlob 22s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatBlob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(80px, -60px) scale(1.1); }
+            66% { transform: translate(-60px, 80px) scale(0.9); }
+        }
+
+        /* ---------- Layout ---------- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ---------- Header / Hero ---------- */
+        .hero {
+            text-align: center;
+            padding: 50px 20px 40px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: heroEntry 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        @keyframes heroEntry {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, #f59e0b, #ec4899);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, #ffd6f5, #c4f0ff, #fff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShimmer 5s ease infinite;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        @keyframes textShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero p {
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 640px;
+            margin: 0 auto 22px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .stat-pill {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-pill strong {
+            color: #ffd6f5;
+            font-size: 1.1rem;
+        }
+
+        /* ---------- Search filter ---------- */
+        .search-wrapper {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 480px;
+            padding: 12px 20px 12px 44px;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 25px;
+            color: #fff;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>");
+            background-repeat: no-repeat;
+            background-position: 16px center;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .search-input:focus {
+            border-color: rgba(236, 72, 153, 0.6);
+            box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.2);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        /* ---------- Navigation Quick-jump ---------- */
+        .quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .quick-nav a {
+            color: #f5f5f7;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .quick-nav a:hover {
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            border-color: transparent;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+        }
+
+        /* ---------- Section Heading ---------- */
+        .section-heading {
+            margin: 50px 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            color: #fff;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .section-heading .count {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: #ffd6f5;
+        }
+
+        .section-heading .line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), transparent);
+            border-radius: 2px;
+        }
+
+        .section-heading .icon {
+            font-size: 1.6rem;
+            filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.6));
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ---------- Card Grid ---------- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: cardEntry 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card.hidden {
+            display: none;
+        }
+
+        @keyframes cardEntry {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Staggered card delays */
+        .card:nth-child(1) { animation-delay: 0.05s; }
+        .card:nth-child(2) { animation-delay: 0.10s; }
+        .card:nth-child(3) { animation-delay: 0.15s; }
+        .card:nth-child(4) { animation-delay: 0.20s; }
+        .card:nth-child(5) { animation-delay: 0.25s; }
+        .card:nth-child(6) { animation-delay: 0.30s; }
+        .card:nth-child(7) { animation-delay: 0.35s; }
+        .card:nth-child(8) { animation-delay: 0.40s; }
+        .card:nth-child(9) { animation-delay: 0.45s; }
+        .card:nth-child(10) { animation-delay: 0.50s; }
+
+        /* Glowing accent that follows hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ec4899, #8b5cf6, #06b6d4);
+            background-size: 200% 100%;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 30px rgba(139, 92, 246, 0.25);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+            animation: shimmerBar 2s linear infinite;
+        }
+
+        @keyframes shimmerBar {
+            from { background-position: 0% 50%; }
+            to { background-position: 200% 50%; }
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            border-radius: 14px;
+            font-size: 1.6rem;
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            transform: rotate(-10deg) scale(1.1);
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .card-tag.html { background: linear-gradient(135deg, #f97316, #ef4444); color: #fff; }
+        .card-tag.c { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; }
+        .card-tag.img { background: linear-gradient(135deg, #06b6d4, #3b82f6); color: #fff; }
+        .card-tag.doc { background: linear-gradient(135deg, #10b981, #059669); color: #fff; }
+        .card-tag.featured { background: linear-gradient(135deg, #f59e0b, #ec4899); color: #fff; }
+
+        .card h3 {
+            font-size: 1.15rem;
+            color: #fff;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .card p {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.55);
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-arrow {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-arrow {
+            transform: translateX(6px);
+        }
+
+        .card-filename {
+            font-family: 'Courier New', monospace;
+            font-size: 0.78rem;
+            color: #ffd6f5;
+        }
+
+        /* ---------- Image preview card ---------- */
+        .image-card {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .image-preview {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .image-card:hover .image-preview {
+            transform: scale(1.08);
+        }
+
+        .image-preview-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-preview-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.4));
+        }
+
+        .image-card .card-body {
+            padding: 20px 24px 24px;
+        }
+
+        /* ---------- README card ---------- */
+        .readme-card {
+            padding: 24px;
+        }
+
+        .readme-card pre {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 0.78rem;
+            color: #c4f0ff;
+            overflow-x: auto;
+            margin-top: 12px;
+            max-height: 200px;
+            line-height: 1.5;
+        }
+
+        .readme-card pre code {
+            font-family: 'Courier New', monospace;
+        }
+
+        /* ---------- No results ---------- */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px 20px;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+            font-size: 1rem;
+        }
+
+        .no-results .icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            margin-top: 60px;
+            padding: 30px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            animation: fadeInUp 0.6s ease 0.8s forwards;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.9rem;
+        }
+
+        footer .author {
+            color: #ffd6f5;
+            font-weight: 700;
+        }
+
+        footer .heart {
+            display: inline-block;
+            color: #ec4899;
+            animation: heartBeat 1.4s ease-in-out infinite;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        /* ---------- Scroll-to-top button ---------- */
+        .scroll-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            border: none;
+            color: #fff;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(139, 92, 246, 0.5);
+            opacity: 0;
+            transform: translateY(20px) scale(0.5);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            z-index: 10;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-4px) scale(1.1);
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 12px;
+            }
+
+            .hero {
+                padding: 36px 16px 28px;
+            }
+
+            .quick-nav {
+                padding: 10px;
+                gap: 6px;
+            }
+
+            .quick-nav a {
+                padding: 7px 12px;
+                font-size: 0.8rem;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .scroll-top {
+                width: 42px;
+                height: 42px;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="top">
+            <div class="hero-badge">📚 HTML Workshop</div>
+            <h1>Workshop Lab — File Index</h1>
+            <p>Every file in the workshop lab, one click away. Browse HTML demos, tables, images, code samples, and documentation.</p>
+            <div class="hero-stats">
+                <div class="stat-pill">📄 <strong>9</strong> HTML Pages</div>
+                <div class="stat-pill">🖼️ <strong>2</strong> Images</div>
+                <div class="stat-pill">💻 <strong>1</strong> C Demo</div>
+                <div class="stat-pill">📝 <strong>1</strong> README</div>
+                <div class="stat-pill">🔗 <strong>13</strong> Total Files</div>
+            </div>
+        </section>
+
+        <!-- ============ SEARCH ============ -->
+        <div class="search-wrapper">
+            <input type="search" id="searchInput" class="search-input"
+                placeholder="Filter files by name or description..." aria-label="Filter files">
+        </div>
+
+        <!-- ============ QUICK NAV ============ -->
+        <nav class="quick-nav" aria-label="Quick navigation">
+            <a href="#formatting">Text Formatting</a>
+            <a href="#lists">Lists</a>
+            <a href="#tables">Tables</a>
+            <a href="#media">Images & Links</a>
+            <a href="#code">Code Demos</a>
+            <a href="#images">Images</a>
+            <a href="#docs">Docs</a>
+        </nav>
+
+        <!-- ============ TEXT FORMATTING ============ -->
+        <div class="section-heading" id="formatting">
+            <span class="icon">🎨</span>
+            <h2>Text Formatting</h2>
+            <span class="count">2 files</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="card-grid">
+            <a class="card" href="demo_page.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">📝</div>
+                    <span class="card-tag html">HTML</span>
+                </div>
+                <h3>HTML Text Formatting Tags</h3>
+                <p>Demonstrates basic text-formatting tags: headings, bold, italic, underline, big/small, sup/sub, line breaks, and preformatted text.</p>
+                <div class="card-meta">
+                    <span class="card-filename">demo_page.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <a class="card" href="page.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">📄</div>
+                    <span class="card-tag html">HTML</span>
+                </div>
+                <h3>HTML Text Formatting Examples</h3>
+                <p>A cleaner, sectioned version of the formatting demo with cards, color samples, and clear explanations for each tag.</p>
+                <div class="card-meta">
+                    <span class="card-filename">page.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ============ LISTS ============ -->
+        <div class="section-heading" id="lists">
+            <span class="icon">📋</span>
+            <h2>List Demos</h2>
+            <span class="count">3 files</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="card-grid">
+            <a class="card" href="list.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">🔢</div>
+                    <span class="card-tag html">HTML</span>
+                </div>
+                <h3>Ordered List (To-Do)</h3>
+                <p>A simple to-do list built using the <code>&lt;ol&gt;</code> ordered-list tag — a beginner example.</p>
+                <div class="card-meta">
+                    <span class="card-filename">list.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <a class="card" href="Page_list.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">•</div>
+                    <span class="card-tag html">HTML</span>
+                </div>
+                <h3>Unordered List</h3>
+                <p>An unordered list of common web technologies like HTML, CSS, JavaScript, Python, Bootstrap, and React.</p>
+                <div class="card-meta">
+                    <span class="card-filename">Page_list.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <a class="card" href="Description_list.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">📖</div>
+                    <span class="card-tag html">HTML</span>
+                </div>
+                <h3>Description List</h3>
+                <p>Shows how to use the <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, and <code>&lt;dd&gt;</code> tags for term/definition pairs.</p>
+                <div class="card-meta">
+                    <span class="card-filename">Description_list.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ============ TABLES ============ -->
+        <div class="section-heading" id="tables">
+            <span class="icon">📊</span>
+            <h2>Table Demos</h2>
+            <span class="count">2 files</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="card-grid">
+            <a class="card" href="table.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">📋</div>
+                    <span class="card-tag html">HTML</span>
+                </div>
+                <h3>My First Table</h3>
+                <p>A minimal HTML table demo with Name, Age, Address, and Blood Group columns using the basic <code>border="2"</code> attribute.</p>
+                <div class="card-meta">
+                    <span class="card-filename">table.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+
+            <a class="card" href="tabledemo.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">✨</div>
+                    <span class="card-tag featured">FEATURED</span>
+                </div>
+                <h3>Animated Data Table</h3>
+                <p>A fully animated, responsive interactive table with random data, sorting, filtering, pagination, search, dark mode, and confetti 🎉.</p>
+                <div class="card-meta">
+                    <span class="card-filename">tabledemo.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ============ IMAGES & LINKS ============ -->
+        <div class="section-heading" id="media">
+            <span class="icon">🖼️</span>
+            <h2>Images & Hyperlinks</h2>
+            <span class="count">1 file</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="card-grid">
+            <a class="card" href="image_hyprlink.html" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">🔗</div>
+                    <span class="card-tag html">HTML</span>
+                </div>
+                <h3>Image & Hyperlinks</h3>
+                <p>Demonstrates <code>&lt;img&gt;</code>, the classic <code>&lt;marquee&gt;</code> tag, and both external (GitHub) and internal (to-do list) hyperlinks.</p>
+                <div class="card-meta">
+                    <span class="card-filename">image_hyprlink.html</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ============ CODE DEMOS ============ -->
+        <div class="section-heading" id="code">
+            <span class="icon">💻</span>
+            <h2>Code Demos</h2>
+            <span class="count">1 file</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="card-grid">
+            <a class="card" href="demo.c" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">🅒</div>
+                    <span class="card-tag c">C</span>
+                </div>
+                <h3>Hello World in C</h3>
+                <p>The classic first program in C — prints "Hello, World!" to the console using stdio.h.</p>
+                <div class="card-meta">
+                    <span class="card-filename">demo.c</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ============ IMAGES ============ -->
+        <div class="section-heading" id="images">
+            <span class="icon">🖼️</span>
+            <h2>Image Assets</h2>
+            <span class="count">2 files</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="card-grid">
+            <a class="card image-card" href="man.jpeg" target="_blank" rel="noopener">
+                <div class="image-preview-wrapper">
+                    <img src="man.jpeg" alt="Man artwork" class="image-preview" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>man.jpeg</h3>
+                        <span class="card-tag img">IMG</span>
+                    </div>
+                    <p>Image asset used by the image_hyprlink.html demo. Click to open full size.</p>
+                    <div class="card-meta">
+                        <span class="card-filename">~853 KB</span>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card image-card" href="image.jpeg" target="_blank" rel="noopener">
+                <div class="image-preview-wrapper">
+                    <img src="image.jpeg" alt="Sample image" class="image-preview" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>image.jpeg</h3>
+                        <span class="card-tag img">IMG</span>
+                    </div>
+                    <p>Larger image asset (~3.8 MB) used by the HTML demo pages. Click to view.</p>
+                    <div class="card-meta">
+                        <span class="card-filename">~3.8 MB</span>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- ============ DOCS ============ -->
+        <div class="section-heading" id="docs">
+            <span class="icon">📝</span>
+            <h2>Documentation</h2>
+            <span class="count">1 file</span>
+            <span class="line"></span>
+        </div>
+
+        <div class="card-grid">
+            <a class="card readme-card" href="README.md" target="_blank" rel="noopener">
+                <div class="card-header">
+                    <div class="card-icon">📋</div>
+                    <span class="card-tag doc">DOC</span>
+                </div>
+                <h3>README.md</h3>
+                <p>Project overview — list of all files in the workshop lab and how to use them.</p>
+                <pre><code># workshop_lab
+
+Contains HTML and demo files for
+workshop-style web examples.
+
+## Files
+- demo.c
+- demo_page.html
+- Description_list.html
+- image.jpeg
+- image_hyprlink.html
+- list.html
+- page.html
+- Page_list.html
+- man.jpeg</code></pre>
+                <div class="card-meta">
+                    <span class="card-filename">README.md</span>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- ============ FOOTER ============ -->
+        <footer>
+            <p>Crafted with <span class="heart">❤️</span> by <span class="author">Gautam</span> · &copy; 2026 Workshop Lab</p>
+            <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.7;">13 files · 7 sections · Every workshop demo one click away</p>
+        </footer>
+
+    </div>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+    <script>
+        // ---------- Live search filter ----------
+        const searchInput = document.getElementById('searchInput');
+        const allCards = document.querySelectorAll('.card');
+        const allGrids = document.querySelectorAll('.card-grid');
+        const allHeadings = document.querySelectorAll('.section-heading');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+
+            allCards.forEach(card => {
+                const text = (card.textContent || '').toLowerCase();
+                const matches = !query || text.includes(query);
+                card.classList.toggle('hidden', !matches);
+            });
+
+            // Hide entire sections that have no visible cards
+            allHeadings.forEach(heading => {
+                const nextGrid = heading.nextElementSibling;
+                if (nextGrid && nextGrid.classList.contains('card-grid')) {
+                    const visibleCards = nextGrid.querySelectorAll('.card:not(.hidden)').length;
+                    heading.style.display = (visibleCards === 0 && query) ? 'none' : '';
+                }
+            });
+
+            // Show "no results" if everything is hidden
+            let noResults = document.getElementById('noResults');
+            const anyVisible = Array.from(allCards).some(c => !c.classList.contains('hidden'));
+            if (!anyVisible && query) {
+                if (!noResults) {
+                    noResults = document.createElement('div');
+                    noResults.id = 'noResults';
+                    noResults.className = 'no-results';
+                    noResults.innerHTML = '<span class="icon">🔍</span>No files match your search.';
+                    document.querySelector('.search-wrapper').after(noResults);
+                }
+            } else if (noResults) {
+                noResults.remove();
+            }
+        });
+
+        // ---------- Stagger card animations on scroll ----------
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${i * 0.05}s`;
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .asset').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // ---------- Scroll-to-top button ----------
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollBtn.classList.toggle('show', window.scrollY > 400);
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ---------- 3D tilt on hero ----------
+        const hero = document.querySelector('.hero');
+        hero.addEventListener('mousemove', (e) => {
+            const rect = hero.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            hero.style.transform = `perspective(1000px) rotateX(${-y * 3}deg) rotateY(${x * 3}deg)`;
+        });
+
+        hero.addEventListener('mouseleave', () => {
+            hero.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    </script>
+</body>
+
+</html>
