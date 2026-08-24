@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Placement</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .outer-frame {
+            position: relative;
+            width: 95vw;
+            height: 90vh;
+            margin: 20px auto;
+            border: 2px solid #222;
+            background-color: #ffffff;
+        }
+
+        .img-top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 140px;
+            height: auto;
+        }
+
+        .img-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: auto;
+        }
+
+        .img-bottom-right {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 140px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-frame">
+        <img src="image.jpeg" alt="Top Left Image" class="img-top-left">
+        <img src="man.jpeg" alt="Center Image" class="img-center">
+        <img src="climb.jpeg" alt="Bottom Right Image" class="img-bottom-right">
+    </div>
+</body>
+
+</html>

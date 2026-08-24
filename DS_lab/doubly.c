@@ -28,9 +28,9 @@ void display(struct node *head){
 }
 int main(){
     struct node *head = NULL;
-    insertbrg(&head,30);
+    insertbrg(&head, 30);
     insertbrg(&head, 40);
-    insertbrg(&head, 50);
+    insertbrg(&head, 110);
     insertbrg(&head, 70);
     insertbrg(&head, 90);
 
