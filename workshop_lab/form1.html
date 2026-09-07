@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <p>Please complete all required fields.</p>
+
+
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="first-name">First name:</label>
+        <input type="text" id="first-name" name="first_name" autocomplete="given-name" required
+            placeholder="Enter your first name">
+
+        <br><br>
+
+        <label for="last-name">Last name:</label>
+        <input type="text" id="last-name" name="last_name" autocomplete="family-name" required
+            placeholder="Enter your last name">
+        <br><br>
+
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" autocomplete="email" required
+            placeholder="Enter your email address">
+        <br><br>
+
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" required placeholder="Enter your phone number">
+        <br><br>
+
+        <label for="date-of-birth">Date of birth:</label>
+        <input type="date" id="date-of-birth" name="date_of_birth" required>
+        <br><br>
+
+        <span>Gender:</span>
+        <input type="radio" id="gender-female" name="gender" value="female">
+        <label for="gender-female">Female</label>
+        <input type="radio" id="gender-male" name="gender" value="male">
+        <label for="gender-male">Male</label>
+        <input type="radio" id="gender-other" name="gender" value="other">
+        <label for="gender-other">Other</label>
+        <br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Address</legend>
+
+        <label for="address">Street address:</label>
+        <input type="text" id="address" name="address" autocomplete="street-address" required
+            placeholder="Enter your street address">
+        <br><br>
+
+        <label for="city">City:</label>
+        <select id="city" name="city" autocomplete="address-level2" required>
+            <option value="">-- Select a city --</option>
+            <option value="ahmedabad">Ahmedabad</option>
+            <option value="bengaluru">Bengaluru</option>
+            <option value="bhopal">Bhopal</option>
+            <option value="chandigarh">Chandigarh</option>
+            <option value="chennai">Chennai</option>
+            <option value="coimbatore">Coimbatore</option>
+            <option value="delhi">Delhi</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="jaipur">Jaipur</option>
+            <option value="kochi">Kochi</option>
+            <option value="kolkata">Kolkata</option>
+            <option value="lucknow">Lucknow</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="nagpur">Nagpur</option>
+            <option value="new-delhi">New Delhi</option>
+            <option value="noida">Noida</option>
+            <option value="patna">Patna</option>
+            <option value="pune">Pune</option>
+            <option value="surat">Surat</option>
+            <option value="thiruvananthapuram">Thiruvananthapuram</option>
+            <option value="visakhapatnam">Visakhapatnam</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="state">State or province:</label>
+        <select id="state" name="state" autocomplete="address-level1" required>
+            <option value="">-- Select a state or union territory --</option>
+            <option value="andhra-pradesh">Andhra Pradesh</option>
+            <option value="assam">Assam</option>
+            <option value="bihar">Bihar</option>
+            <option value="chhattisgarh">Chhattisgarh</option>
+            <option value="delhi-nct">Delhi</option>
+            <option value="goa">Goa</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="haryana">Haryana</option>
+            <option value="himachal-pradesh">Himachal Pradesh</option>
+            <option value="jharkhand">Jharkhand</option>
+            <option value="karnataka">Karnataka</option>
+            <option value="kerala">Kerala</option>
+            <option value="madhya-pradesh">Madhya Pradesh</option>
+            <option value="maharashtra">Maharashtra</option>
+            <option value="odisha">Odisha</option>
+            <option value="punjab">Punjab</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="tamil-nadu">Tamil Nadu</option>
+            <option value="telangana">Telangana</option>
+            <option value="uttar-pradesh">Uttar Pradesh</option>
+            <option value="uttarakhand">Uttarakhand</option>
+            <option value="west-bengal">West Bengal</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" autocomplete="country-name" required>
+            <option value="">-- Select a country --</option>
+            <option value="india">India</option>
+            <option value="united-kingdom">United Kingdom</option>
+            <option value="united-states">United States</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+            <option value="new-zealand">New Zealand</option>
+            <option value="germany">Germany</option>
+            <option value="france">France</option>
+            <option value="japan">Japan</option>
+            <option value="uae">United Arab Emirates</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="postal-code">PIN code:</label>
+        <input type="text" id="postal-code" name="postal_code" autocomplete="postal-code" required
+            placeholder="Enter your PIN code">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Education and Preferences</legend>
+
+        <label for="education">Highest education level:</label>
+        <select id="education" name="education">
+            <option value="">-- Select an option --</option>
+            <option value="school">School</option>
+            <option value="diploma">Diploma</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="btech">B.Tech / Bachelor of Technology</option>
+            <option value="postgraduate">Postgraduate</option>
+            <option value="mtech">M.Tech / Master of Technology</option>
+            <option value="phd">Ph.D.</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="course">Course or area of interest:</label>
+        <select id="course" name="course">
+            <option value="">-- Select a course --</option>
+            <option value="btech-cse">B.Tech Computer Science and Engineering</option>
+            <option value="btech-it">B.Tech Information Technology</option>
+            <option value="btech-ai-ml">B.Tech Artificial Intelligence and Machine Learning</option>
+            <option value="btech-data-science">B.Tech Data Science</option>
+            <option value="btech-cyber-security">B.Tech Cyber Security</option>
+            <option value="btech-ec">B.Tech Electronics and Communication Engineering</option>
+            <option value="btech-ee">B.Tech Electrical and Electronics Engineering</option>
+            <option value="btech-mechanical">B.Tech Mechanical Engineering</option>
+            <option value="btech-civil">B.Tech Civil Engineering</option>
+            <option value="btech-biotechnology">B.Tech Biotechnology</option>
+            <option value="btech-chemical">B.Tech Chemical Engineering</option>
+            <option value="btech-aerospace">B.Tech Aerospace Engineering</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="start-date">Preferred start date:</label>
+        <input type="date" id="start-date" name="start_date" placeholder="Select a date">
+        <br><br>
+
+        <span>Preferred contact method:</span>
+        <input type="radio" id="contact-email" name="contact_method" value="email" checked>
+        <label for="contact-email">Email</label>
+        <input type="radio" id="contact-phone" name="contact_method" value="phone">
+        <label for="contact-phone">Phone</label>
+        <br><br>
+
+        <span>Interests:</span>
+        <input type="checkbox" id="interest-web" name="interests" value="web-development">
+        <label for="interest-web">Web development</label>
+        <input type="checkbox" id="interest-design" name="interests" value="design">
+        <label for="interest-design">Design</label>
+        <input type="checkbox" id="interest-data" name="interests" value="data">
+        <label for="interest-data">Data science</label>
+        <input type="checkbox" id="interest-ai" name="interests" value="artificial-intelligence">
+        <label for="interest-ai">Artificial intelligence</label>
+        <input type="checkbox" id="interest-cyber-security" name="interests" value="cyber-security">
+        <label for="interest-cyber-security">Cyber security</label>
+        <input type="checkbox" id="interest-cloud" name="interests" value="cloud-computing">
+        <label for="interest-cloud">Cloud computing</label>
+        <input type="checkbox" id="interest-robotics" name="interests" value="robotics">
+        <label for="interest-robotics">Robotics</label>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Account and Documents</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" autocomplete="username" required
+            placeholder="Choose a username">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required
+            placeholder="Choose a password">
+        <br><br>
+
+        <label for="resume">Upload resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+        <br><br>
+
+        <label for="website">Website or portfolio:</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="message">Additional comments:</label>
+        <br>
+        <textarea id="message" name="message" rows="6" cols="40"
+            placeholder="Enter any additional information here."></textarea>
+        <br><br>
+
+        <label for="how-found">How did you hear about us?</label>
+        <select id="how-found" name="how_found">
+            <option value="">-- Select an option --</option>
+            <option value="friend">Friend or family</option>
+            <option value="search">Search engine</option>
+            <option value="social-media">Social media</option>
+            <option value="advertisement">Advertisement</option>
+            <option value="college-event">College event</option>
+            <option value="email">Email</option>
+            <option value="online-course">Online course</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions.</label>
+    </fieldset>
+
+    <br>
+    <button type="submit">Submit Form</button>
+    <button type="reset">Clear Form</button>
+
+
+    <hr>
+
+
+</body>
+
+</html>
