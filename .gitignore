@@ -1,1 +1,22 @@
-.exe
+# Compiled binaries and executables
+*.exe
+*.out
+*.o
+*.obj
+
+# Debug and symbol files
+*.pdb
+*.dSYM/
+
+# Build directories
+build/
+bin/
+dist/
+
+# Editor and IDE configurations
+.vscode/
+.idea/
+
+# OS artifacts
+Thumbs.db
+.DS_Store
