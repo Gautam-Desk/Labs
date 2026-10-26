@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML CSS Practice Answers</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #123d6b;
+      margin-bottom: 30px;
+    }
+    .note {
+      background: #fff3cd;
+      border: 1px solid #ffe69c;
+      color: #5c4b00;
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .q {
+      background: #fff;
+      border: 1px solid #dfe7f1;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .q h2 {
+      margin: 0 0 14px;
+      color: #1d4e89;
+      font-size: 1.2rem;
+    }
+    pre {
+      background: #1f2937;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 15px;
+      overflow-x: auto;
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML + CSS Practice Answers</h1>
+    <div class="note">
+      Some images in the PDF scan are not clearly visible. For those items, simple equivalent HTML code is provided based on the written instructions.
+    </div>
+
+    <section class="q">
+      <h2>Q1. Personal Data Form</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Personal Data Form&lt;/title&gt;
+  &lt;style&gt;
+    body { font-family: Arial; background: #f3f3f3; }
+    form { width: 420px; margin: 40px auto; background: white; padding: 20px; border-radius: 10px; }
+    input, select, textarea { width: 100%; padding: 8px; margin: 6px 0 12px; }
+    .row { margin-bottom: 10px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form&gt;
+    &lt;h2&gt;Personal Data Form&lt;/h2&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="name" &gt;
+
+    &lt;label&gt;Password:&lt;/label&gt;
+    &lt;input type="password" name="pass" &gt;
+
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" name="email" &gt;
+
+    &lt;label&gt;City:&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;Mumbai&lt;/option&gt;
+      &lt;option&gt;Delhi&lt;/option&gt;
+      &lt;option&gt;Pune&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label&gt;Gender:&lt;/label&gt;
+    &lt;input type="radio" name="gender" value="Male"&gt; Male
+    &lt;input type="radio" name="gender" value="Female"&gt; Female
+
+    &lt;label&gt;Hobbies:&lt;/label&gt;
+    &lt;input type="checkbox" name="hobby" value="Reading"&gt; Reading
+    &lt;input type="checkbox" name="hobby" value="Music"&gt; Music
+    &lt;input type="checkbox" name="hobby" value="Sports"&gt; Sports
+
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q2. Simple HTML Output</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Sample Output&lt;/h2&gt;
+  &lt;p&gt;This is a simple HTML page.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q3. Simple HTML Output</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome&lt;/h1&gt;
+  &lt;p&gt;This is a basic webpage example.&lt;/p&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;City&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Amit&lt;/td&gt;&lt;td&gt;Pune&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Neha&lt;/td&gt;&lt;td&gt;Mumbai&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q4. College Web Page</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My College&lt;/title&gt;
+  &lt;style&gt;
+    body { font-family: Arial; text-align: center; }
+    h1 { font-size: 40px; }
+    .course { font-weight: bold; margin: 8px; }
+    .red { color: red; }
+    .blue { color: blue; }
+    .green { color: green; }
+    .purple { color: purple; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;ABC College&lt;/h1&gt;
+  &lt;p&gt;123 Main Road, Pune&lt;/p&gt;
+
+  &lt;div class="course red"&gt;BCA&lt;/div&gt;
+  &lt;div class="course blue"&gt;BSc&lt;/div&gt;
+  &lt;div class="course green"&gt;BBA&lt;/div&gt;
+  &lt;div class="course purple"&gt;MBA&lt;/div&gt;
+
+  &lt;marquee&gt;Welcome to ABC College - Quality Education for Life&lt;/marquee&gt;
+
+  &lt;br&gt;&lt;br&gt;
+  &lt;img src="college.jpg" alt="College" width="300"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q5. 7 Colored Lines</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p style="color:red"&gt;This line is red.&lt;/p&gt;
+  &lt;p style="color:blue"&gt;This line is blue.&lt;/p&gt;
+  &lt;p style="color:green"&gt;This line is green.&lt;/p&gt;
+  &lt;p style="color:orange"&gt;This line is orange.&lt;/p&gt;
+  &lt;p style="color:purple"&gt;This line is purple.&lt;/p&gt;
+  &lt;p style="color:brown"&gt;This line is brown.&lt;/p&gt;
+  &lt;p style="color:black"&gt;This line is black.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q6. Sample HTML Output</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Sample Example&lt;/h2&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;&lt;th&gt;Roll No&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Marks&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Aman&lt;/td&gt;&lt;td&gt;85&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Riya&lt;/td&gt;&lt;td&gt;90&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q7. My City Page</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;myCity&lt;/title&gt;
+  &lt;style&gt;
+    body { text-align: center; font-family: Arial; }
+    h1 { color: blue; font-size: 50px; }
+    .landmark { font-weight: bold; margin: 10px; }
+    .red { color: red; }
+    .green { color: green; }
+    .purple { color: purple; }
+    .blink { animation: blink 1s linear infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Pune&lt;/h1&gt;
+  &lt;div class="landmark red"&gt;Shaniwar Wada&lt;/div&gt;
+  &lt;div class="landmark green"&gt;Aga Khan Palace&lt;/div&gt;
+  &lt;div class="landmark purple"&gt;Sinhagad Fort&lt;/div&gt;
+  &lt;div class="landmark blink"&gt;ABC College&lt;/div&gt;
+  &lt;marquee&gt;Welcome to my city - Pune&lt;/marquee&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q8. Another 7 Colored Lines</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p style="color:maroon"&gt;This line is maroon.&lt;/p&gt;
+  &lt;p style="color:navy"&gt;This line is navy.&lt;/p&gt;
+  &lt;p style="color:teal"&gt;This line is teal.&lt;/p&gt;
+  &lt;p style="color:gold"&gt;This line is gold.&lt;/p&gt;
+  &lt;p style="color:gray"&gt;This line is gray.&lt;/p&gt;
+  &lt;p style="color:darkgreen"&gt;This line is darkgreen.&lt;/p&gt;
+  &lt;p style="color:chocolate"&gt;This line is chocolate.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q9. Sample HTML Output</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h3&gt;Student Information&lt;/h3&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;&lt;th&gt;Student&lt;/th&gt;&lt;th&gt;Marks&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Rohan&lt;/td&gt;&lt;td&gt;88&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Sneha&lt;/td&gt;&lt;td&gt;92&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q10. 7 Colored Lines</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p style="color:tomato"&gt;This line is tomato.&lt;/p&gt;
+  &lt;p style="color:olive"&gt;This line is olive.&lt;/p&gt;
+  &lt;p style="color:indigo"&gt;This line is indigo.&lt;/p&gt;
+  &lt;p style="color:crimson"&gt;This line is crimson.&lt;/p&gt;
+  &lt;p style="color:cyan"&gt;This line is cyan.&lt;/p&gt;
+  &lt;p style="color:magenta"&gt;This line is magenta.&lt;/p&gt;
+  &lt;p style="color:darkorange"&gt;This line is darkorange.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q11. Different Text Styles</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;&lt;b&gt;This line is bold.&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;i&gt;This line is italic.&lt;/i&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;u&gt;This line is underlined.&lt;/u&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;b&gt;&lt;i&gt;This line is bold + italic.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;b&gt;&lt;u&gt;This line is bold + underlined.&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;i&gt;&lt;u&gt;This line is italic + underlined.&lt;/u&gt;&lt;/i&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;b&gt;&lt;i&gt;&lt;u&gt;This line is bold + italic + underlined.&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q12. Departmental Store Customer Form</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Customer Form&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form&gt;
+    &lt;h2&gt;Customer Information&lt;/h2&gt;
+    &lt;label&gt;Name:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" name="name"&gt;&lt;br&gt;
+
+    &lt;label&gt;Contact Phone No:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="tel" name="phone"&gt;&lt;br&gt;
+
+    &lt;label&gt;Preferred Days of Purchase:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" name="day"&gt; Monday
+    &lt;input type="checkbox" name="day"&gt; Wednesday
+    &lt;input type="checkbox" name="day"&gt; Saturday&lt;br&gt;
+
+    &lt;label&gt;Favourite Item:&lt;/label&gt;&lt;br&gt;
+    &lt;select&gt;
+      &lt;option&gt;Clothes&lt;/option&gt;
+      &lt;option&gt;Electronics&lt;/option&gt;
+      &lt;option&gt;Groceries&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;
+
+    &lt;label&gt;Suggestions:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea rows="4" cols="30"&gt;&lt;/textarea&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+    &lt;input type="reset" value="Reset"&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q13. Warning Message</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body { background: red; text-align: center; color: white; }
+    .warning {
+      font-size: 60px; font-weight: bold;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="warning"&gt;WARNING&lt;/div&gt;
+  &lt;marquee&gt;Read the message&lt;/marquee&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q14. My City Page</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;myCity&lt;/title&gt;
+  &lt;style&gt;
+    body { text-align: center; font-family: Arial; }
+    h1 { color: blue; font-size: 45px; }
+    .place { margin: 8px; font-weight: bold; }
+    .red { color: red; }
+    .green { color: green; }
+    .purple { color: purple; }
+    .blink { animation: blink 1s infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Nagpur&lt;/h1&gt;
+  &lt;div class="place red"&gt;Deekshabhoomi&lt;/div&gt;
+  &lt;div class="place green"&gt;Zero Mile&lt;/div&gt;
+  &lt;div class="place purple"&gt;Mahal&lt;/div&gt;
+  &lt;div class="place blink"&gt;ABC College&lt;/div&gt;
+  &lt;marquee&gt;Explore the beauty of my city&lt;/marquee&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q15. Warning Message</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body { background: red; color: white; text-align: center; }
+    .warning { font-size: 60px; font-weight: bold; animation: blink 1s infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="warning"&gt;WARNING&lt;/div&gt;
+  &lt;marquee&gt;Read the message&lt;/marquee&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q16. My College Page with Background Image</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My College&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      background-image: url('college.jpg');
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-family: Arial;
+    }
+    h1 { font-size: 45px; }
+    .course { margin: 10px; font-weight: bold; }
+    .r { color: red; }
+    .b { color: blue; }
+    .g { color: green; }
+    .y { color: yellow; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;ABC College&lt;/h1&gt;
+  &lt;p&gt;123 Main Road, Pune&lt;/p&gt;
+  &lt;div class="course r"&gt;BCA&lt;/div&gt;
+  &lt;div class="course b"&gt;BSc&lt;/div&gt;
+  &lt;div class="course g"&gt;BBA&lt;/div&gt;
+  &lt;div class="course y"&gt;MBA&lt;/div&gt;
+  &lt;marquee&gt;Quality education and bright future&lt;/marquee&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q17. Article Upload Form</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;form&gt;
+    &lt;h2&gt;Upload Article&lt;/h2&gt;
+    &lt;label&gt;File Path:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="file" name="file"&gt;&lt;br&gt;
+
+    &lt;label&gt;Author Name:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" name="author"&gt;&lt;br&gt;
+
+    &lt;label&gt;Type:&lt;/label&gt;&lt;br&gt;
+    &lt;select&gt;
+      &lt;option&gt;Technical&lt;/option&gt;
+      &lt;option&gt;Literary&lt;/option&gt;
+      &lt;option&gt;General&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;
+
+    &lt;label&gt;Subject Topic:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" name="topic"&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+    &lt;input type="reset" value="Reset"&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q18. Warning Message</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body { background: red; color: white; text-align: center; }
+    .warning { font-size: 60px; font-weight: bold; animation: blink 1s infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="warning"&gt;WARNING&lt;/div&gt;
+  &lt;marquee&gt;Read the message&lt;/marquee&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q19. Polynomial Expressions</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Polynomial Expressions&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li&gt;a&lt;sub&gt;0&lt;/sub&gt; + a&lt;sub&gt;1&lt;/sub&gt;x + a&lt;sub&gt;2&lt;/sub&gt;x&lt;sup&gt;2&lt;/sup&gt; + a&lt;sub&gt;3&lt;/sub&gt;x&lt;sup&gt;3&lt;/sup&gt;&lt;/li&gt;
+    &lt;li&gt;5y&lt;sup&gt;3&lt;/sup&gt; - 2y + 9&lt;/li&gt;
+    &lt;li&gt;8a&lt;sup&gt;4&lt;/sup&gt; - 3a&lt;sup&gt;2&lt;/sup&gt; + a - 6&lt;/li&gt;
+    &lt;li&gt;2m&lt;sup&gt;5&lt;/sup&gt; + 7m&lt;sup&gt;3&lt;/sup&gt; - m + 10&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q20. Polynomial Expressions</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;h2&gt;Polynomial Expressions&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li&gt;9p&lt;sup&gt;2&lt;/sup&gt; - 4p + 1&lt;/li&gt;
+    &lt;li&gt;x&lt;sup&gt;6&lt;/sup&gt; + 3x&lt;sup&gt;4&lt;/sup&gt; - x&lt;sup&gt;2&lt;/sup&gt; + 12&lt;/li&gt;
+    &lt;li&gt;4k&lt;sup&gt;3&lt;/sup&gt; + 6k - 11&lt;/li&gt;
+    &lt;li&gt;z&lt;sup&gt;5&lt;/sup&gt; - z&lt;sup&gt;2&lt;/sup&gt; + 3z + 2&lt;/li&gt;
+    &lt;li&gt;t&lt;sup&gt;4&lt;/sup&gt; - 5t&lt;sup&gt;3&lt;/sup&gt; + 6t - 9&lt;/li&gt;
+    &lt;li&gt;6b&lt;sup&gt;2&lt;/sup&gt; + 2b + 14&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+
+    <section class="q">
+      <h2>Q21. Table Using th, tr, td</h2>
+      <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+      &lt;th&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Rohit&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;Nagpur&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Asha&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;Pune&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </section>
+  </div>
+</body>
+</html>

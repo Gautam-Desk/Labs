@@ -1,0 +1,173 @@
+--- PAGE 1 ---
+1.Write a HTML program to design a form 
+which should allow to enter your personal 
+data 
+( Hint: make use of text field, password 
+field, e-mail, lists, radio buttons, 
+checkboxes, submit button) 
+ 
+2. Write a HTML code to generate following 
+output 
+ 
+3.Write a HTML code to generate following 
+output 
+
+--- PAGE 2 ---
+ 
+4.Create a web page of your college with 
+following specifications.. 
+Place your College name at the top of the 
+page in large text followed by address in 
+smaller size Add names of courses offered 
+each in a different color, style and typeface 
+Add scrolling text with a message of your 
+choice Add college image at the bottom 
+ 
+5.Create an html page with 7 separate lines 
+in different colors. State color of each line 
+in its text. 
+
+--- PAGE 3 ---
+6.Write a HTML code to generate following 
+output 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 4 ---
+7.Create an html page with following 
+specifications.. 
+Title should be about myCity Place your 
+City name at the top of the page in large 
+text and in blue color Add names of 
+landmarks in your city each in a different 
+color, style and typeface One of the 
+landmark, your college name should be 
+blinking . Add scrolling text with a message 
+of your choice 
+ 
+8.Create an html page with 7 separate lines 
+in different colors. State color of each line 
+in its text. 
+ 
+ 
+--- PAGE 5 ---
+9.Write a HTML code to generate following 
+output 
+ 
+ 
+10.Create an html page with 7 separate 
+lines in different colors. State color of each 
+line in its text. 
+ 
+11.Create an html page with all the 
+different text styles (bold, italic and 
+underlined) and its combinations separate 
+lines. State style of each line in its text. 
+
+--- PAGE 6 ---
+12.Design an html form to take the 
+information of a customer visiting a 
+departmental store such as name, contact 
+phone no , preferred days of purchasing , 
+favourite item ( to be selected from a list of 
+items), suggestions etc. One should 
+provide button to Submit as well as Reset 
+the form contents. 
+ 
+13.Create an html page with red 
+background with a message "warning" in 
+large size blinking. Add scrolling text "read 
+the message" below it. 
+ 
+ 
+ 
+--- PAGE 7 ---
+14.Create an html page with following 
+specifications Title should be about myCity 
+Place your City name at the top of the page 
+in large text and in blue color 
+Add names of landmarks in your city each 
+in a different color, style and typeface One 
+of the landmark, your college name should 
+be blinking 
+Add scrolling text with a message of your 
+choice 
+ 
+15.Create an html page with red 
+background with a message "warning" in 
+large size blinking. Add scrolling text "read 
+the message" below it. 
+--- PAGE 8 ---
+16.Create an html page with following 
+specifications 
+a. Title should be about mycollege 
+b.Put the image in the background 
+c.Place your College name at the top of the    
+page in large text followed by address in 
+smaller size 
+d.Add names of courses offered each in a 
+different color, style and typeface 
+e.Add scrolling text with a message of your 
+choice 
+ 
+17.Design an html form to take the 
+information of a article to be uploaded 
+such as file path, author name , type 
+(technical, literary, general), subject topic 
+--- PAGE 9 ---
+(to be selected from a list) etc. One should 
+provide button to Submit as well as Reset 
+the form contents. 
+ 
+18.Create an html page with red 
+background with a message "warning" in 
+large size blinking. Add scrolling text "read 
+the message" below it. 
+ 
+19.Create an html page containing the 
+polynomial expression as follows  
+1. a0 + a1x+ a2x2 + a3 x3 
+2. 𝟓𝒚𝟑 − 𝟐𝒚 + 𝟗 
+3. 𝟖𝒂𝟒 − 𝟑𝒂𝟐 + 𝒂 − 𝟔 
+4. 𝟐𝒎𝟓 + 𝟕𝒎𝟑 − 𝒎 + 𝟏𝟎 
+--- PAGE 10 ---
+20.Create an html page containing the 
+polynomial expression as follows  
+   1.   9𝑝2 − 4𝑝 + 1  
+   2.   𝑥6 + 3𝑥4 − 𝑥2 + 12 
+   3.   4𝑘3 + 6𝑘 − 11 
+𝟒.    𝑧5 − 𝑧2 + 3𝑧 + 2 
+   5.    𝑡 4 − 5𝑡3 + 6𝑡 − 9 
+   6.    6𝑏2 + 2𝑏 + 14 
+ 
+--- PAGE 11 ---
+1.Write a code for html webpage which displays table using  
+     <th>,< tr> and < td> tag . 
+ 
+ 
+ 
+2.Write a code for html webpage which displays table using  
+    <th>,< tr> and < td> tag . 
+ 
+ 
+ 
+ 
+
+--- PAGE 12 ---
+3. Write a code for html webpage which displays table using 
+     <th>,< tr> and < td> tag . 
+ 
+4.Write a code for html webpage which displays table using  
+     <th>,< tr> and < td> tag . 
+ 
+
+--- PAGE 13 ---
+5.Write a code for html webpage which displays table using  
+     <th>,< tr> and < td> tag . 
+ 
+
